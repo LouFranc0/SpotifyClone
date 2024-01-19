@@ -1,0 +1,191 @@
+/* .layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+} */
+
+.App {
+  background-color: #1c1c1c;
+}
+
+.layout {
+  overflow: hidden;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+    "sidebar sidebar home home home home home home home home home home"
+    "sidebar sidebar player player player player player player player player player player";
+}
+
+/*
+==================
+SIDEBAR
+==================
+*/
+
+.sidebar {
+  min-height: 100vh;
+  grid-area: sidebar;
+  /*   width: 20%; */
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-items {
+  color: white;
+  /*  width: 200px; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+  padding: 1rem;
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-item:hover {
+  background-color: #272727;
+}
+
+.logo-img {
+  width: 80%;
+  margin: 1rem;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-top: 1rem;
+  padding: 3px 10px;
+}
+.search-bar {
+  display: inline-block;
+  width: 70%;
+  padding: 5px;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.submit-btn {
+  display: inline-block;
+  background-color: rgb(0, 187, 0);
+  border: none;
+  padding: 5px;
+  border-radius: 6px;
+  color: white;
+}
+
+.login-btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.login-btns button {
+  display: block;
+  border-radius: 20px;
+  border: none;
+  padding: 0.5rem 2rem;
+  width: 80%;
+  background-color: white;
+}
+
+.login-btns button:nth-child(1):hover {
+  background-color: rgb(0, 187, 0);
+}
+.login-btns button:nth-child(2) {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+.login-btns button:nth-child(2):hover {
+  color: black;
+  background-color: white;
+}
+
+.policies {
+  padding: 1rem 0;
+  text-align: center;
+  text-decoration: none;
+  color: gray;
+}
+
+.policies a {
+  text-decoration: none;
+  color: grey;
+}
+.policies a:hover {
+  text-decoration: underline;
+  color: rgb(180, 180, 180);
+}
+
+/* END OF SIDEBAR */
+
+/*
+==================
+HOMEPAGE
+==================
+*/
+.home {
+  background-color: rgb(31, 31, 31);
+  height: 86.2vh;
+  overflow-y: auto;
+  grid-area: home;
+  color: white;
+}
+
+.song-img {
+  width: 90%;
+}
+
+.song-text a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*
+==================
+PLAYER
+==================
+*/
+.player {
+  background-color: black;
+  grid-area: player;
+}
+
+.actual-track {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.album-img-container {
+  flex-basis: 25%;
+}
+.album-img-container img {
+  width: 100%;
+}
+
+/*
+==================
+ALBUM PAGE
+==================
+*/
+.album {
+  background-color: black;
+}
